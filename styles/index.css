@@ -1,7 +1,8 @@
 :root {
     --primary-color: #363d7c;
-    --secondary-color: #144a52;
-    --tertiary-color: #ffffff;
+    --secondary-color: #144f58;
+    --tertiary-color: #f8f3f3;
+    --hovered-color: rgb(218, 7, 169);
   }
   
   * {
@@ -13,9 +14,35 @@
   
   
   body {
-    font-family: 'Lobster', cursive;
+  font-family: 'Lobster', cursive;
   background-color: rgb(white);
   color: rgb(61, 102, 102);
   }
   
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    height: 60px;
+    font-size: 2vw;
+    padding-top: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
+  .btnHeader {
+    border-radius: 3px;
+    background-color: white;
+    border: 0;
+    outline: 0;
+    color: var(--secondary-color);
+    font-family: 'Lobster', cursive;
+    padding-right: 5px;
+    padding-left: 5px;
+  }
   
+
+  .btnHeader:hover {
+    background-color: var(--hovered-color);
+  }
