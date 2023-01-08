@@ -14,7 +14,7 @@ var questionsEl = document.querySelector(".all-question");
 // ELEMENT LOCATIONS VAR
 let questionEl = document.querySelector("#question");
 const correctWrong = document.querySelector("#right-wrong");
-let questionCount = 0;
+const  questionCount = 0;
 
 
 // FINAL SCORE VAR
