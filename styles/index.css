@@ -1,48 +1,42 @@
 :root {
     --primary-color: #363d7c;
     --secondary-color: #144f58;
-    --tertiary-color: #f8f3f3;
     --hovered-color: rgb(218, 7, 169);
+    --font-family-lobster: 'lobster', cursive;
   }
   
   * {
-    box-sizing: border-box;
     margin: 0;
     padding: 0;
-  }
-  
-  
-  
-  body {
-  font-family: 'Lobster', cursive;
-  background-color: rgb(white);
-  color: rgb(61, 102, 102);
-  }
-  
-  header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-wrap: wrap;
-    height: 60px;
-    font-size: 2vw;
-    padding-top: 10px;
-    padding-left: 10px;
-    padding-right: 10px;
-  }
+    box-sizing: border-box;
+}
 
-  .btnHeader {
-    border-radius: 3px;
-    background-color: white;
-    border: 0;
-    outline: 0;
-    color: var(--secondary-color);
+body {
     font-family: 'Lobster', cursive;
+    background-color: white;
+    color: var(--primary-color);
+}
+
+header {
+    display: flex;
+    justify-content:space-between;
+    padding-right: 10px;
+    padding-left: 10px;
+    padding-top: 20px; 
+}
+.btnHeader {
+    border: none;
+    background-color: white;
+    font-family: var(--font-family-lobster);
+    color: var(--primary-color);
+    
+ }
+
+ .btnHeader:hover {
+    background-color: var(--hovered-color);
     padding-right: 5px;
     padding-left: 5px;
-  }
-  
-
-  .btnHeader:hover {
-    background-color: var(--hovered-color);
-  }
+    border-radius: 5px;
+    transition: 4ms;
+    color: white;
+ }

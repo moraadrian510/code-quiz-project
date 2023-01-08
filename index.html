@@ -11,36 +11,36 @@
     <link rel="stylesheet" href="./styles/index.css">
     <title>Take The Quiz!</title>
 </head>
-<body>
-    <header>
-        <div>
-            <button class="btnHeader" id="view-high-scores">View High Scores</button>
-        </div>
-        <div>
-            <p>Time Left: <span id="timeleft"></span></p>
-        </div>
-    </header>
-    <div id="mainDiv"> <!-- container for grid -->
+<header>
+    <div>
+        <button class="btnHeader" id="view-high-scores">View High Scores</button>
+    </div>
+    <div>
+        <p>Time: <span id="timeLeft">good luck!</span></p>
+    </div>
+     
+</header>
+
+    <div id="mainDiv"> <!-- Container for grid items -->
         <div id="gridContainer">
-            <p id="questionDisplay">Coding Quiz Challenge!</p>
+            <p id="questionDisplay">Welcome to our code Quiz!</p>
             <p id="finalScoreDisplay"></p>
             <p id="enterInitials"></p>
-            <label class="label-initials" for="enterInitalsTextArea">Enter Initials</label>
-            <textarea id="enterInitialsTextArea" ></textarea>
+            <textarea id=enterInitialsTextArea></textarea>
+            <button class="btn" id="start-quiz">Start Quiz</button>
             <button class="btn" id="answer1"></button>
             <button class="btn" id="answer2"></button>
             <button class="btn" id="answer3"></button>
             <button class="btn" id="answer4"></button>
-            <button class="btn" id="answer5"></button>
-            <button class="btn" id="sumitScore"></button>
+            <button class="btn" id="submitScore"></button> <!-- Grid nows where to put next item.-->
+
         </div>
-        <div>
-            <p id="answer-cont"></p>
-            <p id="answer"></p>
+        <div id="answerCorrectWrongGrid"></div>
+        <p id=answerCorrectWrong></p>
         </div>
+
     </div>
-    <script src="./script.js"></script>
-    
-</body>
+
+
   
 </html>
