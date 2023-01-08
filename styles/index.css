@@ -1,7 +1,7 @@
 :root {
     --primary-color: #363d7c;
     --secondary-color: #144f58;
-    --hovered-color: rgb(218, 7, 169);
+    --hovered-color: rgb(207, 46, 169);
     --font-family-lobster: 'lobster', cursive;
   }
   
@@ -19,24 +19,34 @@ body {
 
 header {
     display: flex;
+    list-style: none;
     justify-content:space-between;
     padding-right: 10px;
     padding-left: 10px;
-    padding-top: 20px; 
+    padding-top: 20px;
+    font-size: 2vw;
 }
+
 .btnHeader {
     border: none;
     background-color: white;
     font-family: var(--font-family-lobster);
     color: var(--primary-color);
+    font-size: 40px;
     
  }
 
  .btnHeader:hover {
     background-color: var(--hovered-color);
-    padding-right: 5px;
-    padding-left: 5px;
+    padding: 5px;
     border-radius: 5px;
     transition: 4ms;
     color: white;
+    text-shadow: 2px 2px 5px rgb(78, 77, 77);
+ }
+
+ #maiDiv {
+    display: flex;
+    flex-wrap: wrap;
+    justify-items: center;
  }
