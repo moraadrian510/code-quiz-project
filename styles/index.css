@@ -1,9 +1,9 @@
 :root { 
     --primary-color: #363d7c;
-    --secondary-color: #e730bf;
     --hovered-color: rgb(207, 46, 169);
-    --font-family-lobster: 'lobster', cursive;
     --font-size-base: 2vw;
+    --font-family-lobster: 'lobster', cursive;
+    
   }
   
   * {
