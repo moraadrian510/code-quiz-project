@@ -37,10 +37,10 @@ let goBackBtn = document.querySelector("#goBack");
 
 
 // VAR ANSER CALL
+const ans4Btn = document.querySelector("#answer-4");
 const ans1Btn = document.querySelector("#answer-1");
 const ans2Btn = document.querySelector("#answer-2");
 const ans3Btn = document.querySelector("#answer-3");
-const ans4Btn = document.querySelector("#answer-4");
 
 
 
@@ -88,7 +88,7 @@ function setTime() {
     }, 1000);
 }
 
-// QUIZ BEGIN FUNCTION
+
 function startQuiz() {
     codersIntro.style.display = "none";
     questionsEl.style.display = "block";
@@ -98,7 +98,6 @@ function startQuiz() {
     setQuestion(questionCount);
 }
 
-// SET QUESTION FUNCTION
 function setQuestion(id) {
     if (id < questions.length) {
         questionEl.textContent = questions[id].question;
@@ -113,7 +112,7 @@ function setQuestion(id) {
 function checkAnswer(event) {
     event.preventDefault();
 
-    //CREATING ELEMENT OF RIGHT OR WRONG
+    //ELEMENT OF RIGHT OR WRONG
     correctWrong.style.display = "block";
     let p = document.createElement("p");
     correctWrong.appendChild(p);
@@ -123,7 +122,7 @@ function checkAnswer(event) {
         p.style.display = 'none';
     }, 1000);
 
-    // RIGHT OR WRONG ANSWER CONDITIONAL STATEMENTS CORRECT
+    // RIGHT OR WRONG ANSWER CONDITIONAL
     if (questions[questionCount].correctAnswer === event.target.value) {
         p.textContent = "Correct!";
     } 
@@ -134,7 +133,7 @@ function checkAnswer(event) {
         p.textContent = "Wrong!";
     }
 
-    // CYCLE 
+   
     if (questionCount < questions.length) {
         questionCount++;
     }
@@ -147,7 +146,7 @@ function addScore(event) {
     finalEl.style.display = "none";
     highscoresEl.style.display = "block";
 
-    let init = initialsInput.value.toUpperCase();
+    var init = initialsInput.value.toUpperCase();
     scoreList.push({ initials: init, score: secondsLeft });
 
     // HIGH SCORE SORTING LIST
@@ -177,7 +176,7 @@ function storeScores() {
 
 function displayScores() {
     // Parsing the JSON string to an object
-    let storedScoreList = JSON.parse(localStorage.getItem("scoreList"));
+    var storedScoreList = JSON.parse(localStorage.getItem("scoreList"));
 
     // WHEN RETRIEVED FROM LOCAL, ARRAY
     if (storedScoreList !== null) {
@@ -192,7 +191,6 @@ function clearScores() {
 }
 
 // START OFF ALL EVENT 
-// Start timer and display first question when click start quiz
 start.addEventListener("click", startQuiz);
 
 // CHECK ANSWER LISTENER EVENT
